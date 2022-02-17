@@ -29,15 +29,49 @@ namespace DigiBank.Classes
             switch (opcao)
             {
                 case 1:
-                    Console.WriteLine("Opção 1");
+                    TelaCriarConta();
                     break;
                 case 2:
-                    Console.WriteLine("Opção 2");
+                    TelaDeLogin();
                     break;
                 default:
                     Console.WriteLine("Opção Inválida!");
                     break;
             }
+
+        }
+
+        private static void TelaCriarConta()
+        {
+            Console.Clear();
+
+            Console.WriteLine("                                                  ");
+            Console.WriteLine("                Digite seu nome:                  ");
+            var nome = Console.ReadLine();
+            Console.WriteLine("               =============================      ");
+            Console.WriteLine("                Digite o CPF:                     ");
+            var cpf = Console.ReadLine();
+            Console.WriteLine("               =============================      ");
+            Console.WriteLine("                Digite sua senha:                 ");
+            var senha = Console.ReadLine();
+            Console.WriteLine("               =============================      ");
+           
+            //Criar uma conta
+        }
+
+        private static void TelaDeLogin()
+        {
+            Console.Clear();
+
+            Console.WriteLine("                                                  ");
+            Console.WriteLine("                Digite o CPF:                     ");
+            var cpf = Console.ReadLine();
+            Console.WriteLine("               =============================      ");
+            Console.WriteLine("                Digite sua senha:                 ");
+            var senha = Console.ReadLine();
+            Console.WriteLine("               =============================      ");
+
+            //Logar no sistema
 
         }
     }
