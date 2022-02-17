@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DigiBank.Contratos
 {
-    internal interface IConta
+    public interface IConta
     {
+        void Depoista(double valor);
+        bool Saca(double valor);
+        double ConsultaSaldo();
+        string GetCodigoDoBanco();
+        string GetNumeroAgencia();
+        string GetNumeroDaConta();
     }
 }

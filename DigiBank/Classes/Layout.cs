@@ -8,6 +8,7 @@ namespace DigiBank.Classes
 {
     public class Layout
     {
+        private static List<Pessoa> pessoas = new List<Pessoa>();
         private static int opcao = 0;
         public static void TelaPrincipal()
         {
@@ -45,18 +46,33 @@ namespace DigiBank.Classes
         {
             Console.Clear();
 
-            Console.WriteLine("                                                  ");
-            Console.WriteLine("                Digite seu nome:                  ");
+            Console.WriteLine("                                              ");
+            Console.Write("                Digite seu nome: ");
             var nome = Console.ReadLine();
-            Console.WriteLine("               =============================      ");
-            Console.WriteLine("                Digite o CPF:                     ");
+            Console.WriteLine("               =============================  ");
+            Console.Write("                Digite o CPF: ");
             var cpf = Console.ReadLine();
-            Console.WriteLine("               =============================      ");
-            Console.WriteLine("                Digite sua senha:                 ");
+            Console.WriteLine("               =============================  ");
+            Console.Write("                Digite sua senha: ");
             var senha = Console.ReadLine();
-            Console.WriteLine("               =============================      ");
-           
+            Console.WriteLine("               =============================  ");
+
             //Criar uma conta
+
+            var contaCorrente = new ContaCorrente();
+            var pessoa = new Pessoa();
+
+            pessoa.SetNome(nome);
+            pessoa.SetCPF(cpf);
+            pessoa.SetSenha(senha);
+            pessoa.Conta = contaCorrente;
+
+            pessoas.Add(pessoa);
+
+            Console.Clear();
+
+            Console.WriteLine("                Conta cadastrada com sucesso.     ");
+            Console.WriteLine("               =============================      ");
         }
 
         private static void TelaDeLogin()
