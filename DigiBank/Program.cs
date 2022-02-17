@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigiBank.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace DigiBank
     {
         static void Main(string[] args)
         {
+            Layout.TelaPrincipal();
+
+            Console.ReadLine();
         }
     }
 }
