@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigiBank.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,13 @@ namespace DigiBank.Contratos
 {
     public interface IConta
     {
-        void Depoista(double valor);
+        void Deposita(double valor);
         bool Saca(double valor);
         double ConsultaSaldo();
         string GetCodigoDoBanco();
         string GetNumeroAgencia();
         string GetNumeroDaConta();
+
+        List<Extrato> Extrato();
     }
 }
